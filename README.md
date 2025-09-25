@@ -1,7 +1,7 @@
 # Godot Sidequests
 
 Gain some experience and level up by doing these short quests!
-See each folder's `QUEST.md` file for a detailed description.
+See each folder's `README.md` file for a detailed description.
 
 ## Quest List (by complexity)
 
