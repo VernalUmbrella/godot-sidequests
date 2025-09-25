@@ -1,4 +1,70 @@
-[gd_scene format=3 uid="uid://ds35ip26g285d"]
+[gd_scene load_steps=13 format=3 uid="uid://ds35ip26g285d"]
+
+[ext_resource type="Script" uid="uid://cc20f5hn7hmyv" path="res://quest_selection.gd" id="1_eox5b"]
+[ext_resource type="Script" uid="uid://bdiijk1vti12f" path="res://sidequest.gd" id="2_l4ol4"]
+[ext_resource type="PackedScene" uid="uid://b2ddbdo65v26y" path="res://quest_button.tscn" id="3_l4ol4"]
+
+[sub_resource type="Resource" id="Resource_ajfx0"]
+script = ExtResource("2_l4ol4")
+display_name = "Hello World!"
+scene_path = &"uid://43kjodbbb7gh"
+metadata/_custom_type_script = "uid://bdiijk1vti12f"
+
+[sub_resource type="Resource" id="Resource_simbx"]
+script = ExtResource("2_l4ol4")
+display_name = "Top-Down Movement"
+scene_path = &"uid://c5iu82cfhu0mg"
+complexity = 2
+metadata/_custom_type_script = "uid://bdiijk1vti12f"
+
+[sub_resource type="Resource" id="Resource_l4ol4"]
+script = ExtResource("2_l4ol4")
+display_name = "Music Player"
+scene_path = &"uid://ckyoybxekwe3g"
+complexity = 2
+metadata/_custom_type_script = "uid://bdiijk1vti12f"
+
+[sub_resource type="Resource" id="Resource_okpy4"]
+script = ExtResource("2_l4ol4")
+display_name = "Art Gallery"
+scene_path = &"uid://bhq2skrxylew1"
+complexity = 2
+metadata/_custom_type_script = "uid://bdiijk1vti12f"
+
+[sub_resource type="Resource" id="Resource_homyy"]
+script = ExtResource("2_l4ol4")
+display_name = "Dice Roller"
+scene_path = &"uid://cjj2x7g1plbbm"
+complexity = 3
+metadata/_custom_type_script = "uid://bdiijk1vti12f"
+
+[sub_resource type="Resource" id="Resource_lc02s"]
+script = ExtResource("2_l4ol4")
+display_name = "Popup Text"
+scene_path = &"uid://bnqejbxgmw7fj"
+complexity = 4
+metadata/_custom_type_script = "uid://bdiijk1vti12f"
+
+[sub_resource type="Resource" id="Resource_4tvrx"]
+script = ExtResource("2_l4ol4")
+display_name = "Ballpit"
+scene_path = &"uid://cjgub323xbfxj"
+complexity = 4
+metadata/_custom_type_script = "uid://bdiijk1vti12f"
+
+[sub_resource type="Resource" id="Resource_1sgo1"]
+script = ExtResource("2_l4ol4")
+display_name = "Calculator"
+scene_path = &"uid://b2o8cg5mvowau"
+complexity = 5
+metadata/_custom_type_script = "uid://bdiijk1vti12f"
+
+[sub_resource type="Resource" id="Resource_80rb2"]
+script = ExtResource("2_l4ol4")
+display_name = "Tic Tac Toe"
+scene_path = &"uid://bni7nt7imiyi3"
+complexity = 6
+metadata/_custom_type_script = "uid://bdiijk1vti12f"
 
 [node name="QuestSelection" type="Control"]
 layout_mode = 3
@@ -7,3 +73,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_eox5b")
+quests = Array[ExtResource("2_l4ol4")]([SubResource("Resource_ajfx0"), SubResource("Resource_simbx"), SubResource("Resource_l4ol4"), SubResource("Resource_okpy4"), SubResource("Resource_homyy"), SubResource("Resource_lc02s"), SubResource("Resource_4tvrx"), SubResource("Resource_1sgo1"), SubResource("Resource_80rb2")])
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_right = 68.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "Godot Sidequests"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -239.0
+offset_top = -183.0
+offset_right = 239.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QuestContainer" type="VBoxContainer" parent="ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" parent="ScrollContainer/QuestContainer" instance=ExtResource("3_l4ol4")]
+layout_mode = 2

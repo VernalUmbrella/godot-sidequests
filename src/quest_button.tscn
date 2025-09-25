@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2ddbdo65v26y"]
+
+[ext_resource type="Script" uid="uid://dcrh10sa1hfgw" path="res://quest_button.gd" id="1_vkod0"]
+
+[node name="QuestButton" type="Button"]
+custom_minimum_size = Vector2(200, 40)
+text = "Hello World!"
+script = ExtResource("1_vkod0")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
