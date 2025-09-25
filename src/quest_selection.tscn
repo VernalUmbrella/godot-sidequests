@@ -52,17 +52,17 @@ scene_path = &"uid://cjgub323xbfxj"
 complexity = 4
 metadata/_custom_type_script = "uid://bdiijk1vti12f"
 
-[sub_resource type="Resource" id="Resource_1sgo1"]
-script = ExtResource("2_l4ol4")
-display_name = "Calculator"
-scene_path = &"uid://b2o8cg5mvowau"
-complexity = 5
-metadata/_custom_type_script = "uid://bdiijk1vti12f"
-
 [sub_resource type="Resource" id="Resource_80rb2"]
 script = ExtResource("2_l4ol4")
 display_name = "Tic Tac Toe"
 scene_path = &"uid://bni7nt7imiyi3"
+complexity = 5
+metadata/_custom_type_script = "uid://bdiijk1vti12f"
+
+[sub_resource type="Resource" id="Resource_1sgo1"]
+script = ExtResource("2_l4ol4")
+display_name = "Calculator"
+scene_path = &"uid://b2o8cg5mvowau"
 complexity = 6
 metadata/_custom_type_script = "uid://bdiijk1vti12f"
 
@@ -74,7 +74,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eox5b")
-quests = Array[ExtResource("2_l4ol4")]([SubResource("Resource_ajfx0"), SubResource("Resource_simbx"), SubResource("Resource_l4ol4"), SubResource("Resource_okpy4"), SubResource("Resource_homyy"), SubResource("Resource_lc02s"), SubResource("Resource_4tvrx"), SubResource("Resource_1sgo1"), SubResource("Resource_80rb2")])
+quests = Array[ExtResource("2_l4ol4")]([SubResource("Resource_ajfx0"), SubResource("Resource_simbx"), SubResource("Resource_l4ol4"), SubResource("Resource_okpy4"), SubResource("Resource_homyy"), SubResource("Resource_lc02s"), SubResource("Resource_4tvrx"), SubResource("Resource_80rb2"), SubResource("Resource_1sgo1")])
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
